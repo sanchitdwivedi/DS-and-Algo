@@ -2,6 +2,7 @@ package Recursion;
 
 import java.io.*;
 
+// killing kth repeatedly person from a circular group of n people.
 public class JosephusProblem {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
