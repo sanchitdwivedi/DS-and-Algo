@@ -2,7 +2,7 @@ package Mathematics;
 
 import java.io.*;
 /**
- * trailingZeros
+ * trailingZeros in factorial
  */
 public class trailingZeros {
 
