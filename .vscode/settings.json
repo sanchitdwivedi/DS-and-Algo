@@ -6,6 +6,7 @@
         "**/.factorypath": true
     },
     "java.project.sourcePaths": [
-        "Sorting"
+        "Sorting",
+        "Matrix"
     ]
 }
