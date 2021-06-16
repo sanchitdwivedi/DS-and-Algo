@@ -8,6 +8,7 @@
     "java.project.sourcePaths": [
         "Sorting",
         "Matrix",
-        "Hashing"
+        "Hashing",
+        "String"
     ]
 }
