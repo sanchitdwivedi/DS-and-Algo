@@ -9,6 +9,7 @@
         "Sorting",
         "Matrix",
         "Hashing",
-        "String"
+        "String",
+        "LinkedList"
     ]
 }
