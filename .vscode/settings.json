@@ -6,10 +6,11 @@
         "**/.factorypath": true
     },
     "java.project.sourcePaths": [
+        "String",
         "Sorting",
         "Matrix",
+        "LinkedList",
         "Hashing",
-        "String",
-        "LinkedList"
+        "Stack"
     ]
 }
