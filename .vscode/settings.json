@@ -7,11 +7,12 @@
     },
     "java.project.sourcePaths": [
         "String",
+        "Stack",
         "Sorting",
+        "Queue",
         "Matrix",
         "LinkedList",
         "Hashing",
-        "Stack",
-        "Queue"
+        "Tree"
     ]
 }
