@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+
 /**
  * InorderTraversal
  */
@@ -20,6 +22,8 @@ public class InorderTraversal {
     	root.right.right=new Node(50);
     	
     	inorder(root);
+        System.out.println();
+        inorderIterative(root);
     }
 
     public static void inorder(Node root){
@@ -27,6 +31,20 @@ public class InorderTraversal {
             inorder(root.left);
             System.out.print(root.key + " ");
             inorder(root.right);
+        }
+    }
+
+    public static void inorderIterative(Node root){
+        ArrayDeque<Node> s = new ArrayDeque<>();
+        Node curr = root;
+        while(curr!=null || !s.isEmpty()){
+            while(curr!=null){
+                s.push(curr);
+                curr = curr.left;
+            }
+            curr = s.pop();
+            System.out.print(curr.key + " ");
+            curr = curr.right;
         }
     }
 }
