@@ -6,6 +6,7 @@
         "**/.factorypath": true
     },
     "java.project.sourcePaths": [
+        "Tree",
         "String",
         "Stack",
         "Sorting",
@@ -13,6 +14,6 @@
         "Matrix",
         "LinkedList",
         "Hashing",
-        "Tree"
+        "Binary Search Tree"
     ]
 }
