@@ -13,10 +13,10 @@
         "Queue",
         "Matrix",
         "LinkedList",
-        "Hashing",
-        "Binary Search Tree",
         "Heap",
+        "Hashing",
         "Graph",
-        "DynamicProgramming"
+        "DynamicProgramming",
+        "Binary Search Tree"
     ]
 }
