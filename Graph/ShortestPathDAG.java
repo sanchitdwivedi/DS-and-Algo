@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * ShortestPathDAG
  */
-class Edge{
+class Edge implements Comparable<Edge>{
     int u;
     int v;
     int weight;
@@ -10,6 +10,10 @@ class Edge{
         this.u = u;
         this.v = v;
         this.weight = weight;
+    }
+    @Override
+    public int compareTo(Edge e) {
+        return e.weight-this.weight;
     }
 }
 public class ShortestPathDAG {
