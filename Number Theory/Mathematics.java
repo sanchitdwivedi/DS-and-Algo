@@ -61,9 +61,9 @@ class Mathematics {
     }
 
     // O(nloglogn)
-    public static List<Integer> sieve(int n){
-        List<Integer> primes = new ArrayList<>();
-        boolean[] isPrime = new boolean[n+1];
+    public static List<Long> sieve(long n){
+        List<Long> primes = new ArrayList<>();
+        boolean[] isPrime = new boolean[(int)n+1];
         Arrays.fill(isPrime, true);
         isPrime[0]=false;
         isPrime[1]=false;
@@ -72,31 +72,31 @@ class Mathematics {
                 for(int j=i*i; j<=n; j+=i) isPrime[j] = false;
             }
         }
-        for(int i=0; i<=n; i++){
-            if(isPrime[i]) primes.add(i);
+        for(long i=0; i<=n; i++){
+            if(isPrime[(int)i]) primes.add(i);
         }
         return primes;
     }
-
     // O(sqrt(h)loglogh)
-    public static List<Integer> segSieve(int l, int h){
-        boolean isPrime[] = new boolean[h-l+1];
+    public static List<Long> segSieve(long l, long h){
+        boolean isPrime[] = new boolean[(int)(h-l+1)];
         Arrays.fill(isPrime, true);
-        List<Integer> primes = sieve((int)Math.sqrt(h));
-        for(int prime: primes){
-            int sm = (l/prime)*prime;
+        List<Long> primes = sieve((long)Math.sqrt(h));
+        for(long prime: primes){
+            long sm = (l/prime)*prime;
             if(sm<l) sm+=prime;
-            sm+=prime;
+            // sm+=prime;
             for(; sm<=h; sm+=prime){
-                isPrime[sm-l] = false;
+                if(prime==sm) continue;
+                isPrime[(int)(sm-l)] = false;
             }
         }
-        List<Integer> res = new ArrayList<>();
-        for(int i=Math.max(2,l); i<=h; i++){
-            if(isPrime[i-l]) res.add(i);
+        List<Long> res = new ArrayList<>();
+        for(long i=Math.max(2,l); i<=h; i++){
+            if(isPrime[(int)(i-l)]) res.add(i);
         }
         return res;
-    }
+    } 
 
     // O(sqrt(n))
     public static List<Integer> factorize(int n){
